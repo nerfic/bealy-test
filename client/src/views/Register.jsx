@@ -17,7 +17,6 @@ export default function Register() {
 
     const handleSumbit = () => {
         if (data.password.length > 3) {
-            console.log(data.password)
             setError(null)
             if (data.password === data.passwordConfirm) {
                 setError(null)
@@ -25,7 +24,7 @@ export default function Register() {
                     setError(null)
                     SignupApi(data, (response) => setSuccess("User create, please login") & setData(initialData) & setTimeout(() => {
                         navigate('/login');
-                    }, 4000), (response) => setError(response.error) & console.log(response));
+                    }, 4000), (response) => setError(response.error));
                 } else {
                     setError("Email too short")
                 }

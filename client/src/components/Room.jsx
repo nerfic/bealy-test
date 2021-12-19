@@ -28,7 +28,6 @@ export default function Room() {
                             <p>My rooms</p>
                             {myRooms.length >= 1 ?
                                 myRooms.map((data, index) => {
-                                    console.log(data)
                                     return (
                                         <div key={index} className="row">
                                             <Link to={`/transfert/${data.room_uuid}`}>{data.room_uuid}</Link>

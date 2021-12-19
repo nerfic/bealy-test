@@ -13,7 +13,7 @@ export default function CreateRoom() {
     }
 
     const handleJoinRoom = () => {
-        JoinRoomApi(roomUuid, (response) => setRoomJoin(response.success) & console.log(response.success))
+        JoinRoomApi(roomUuid, (response) => setRoomJoin(response.success))
     }
 
     return (

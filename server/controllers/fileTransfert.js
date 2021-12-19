@@ -10,7 +10,6 @@ const upload = multer({ dest: 'public/uploads' });
 
 router.post("/:uuid", userConnected, upload.single('file'), async (req, res) => {
     try {
-        console.log(req.file)
         let fileName = req.file.originalname.split(".")
         let extension = fileName[fileName.length - 1]
         fs.renameSync(req.file.path, path.join(req.file.destination, `${req.file.filename}.${extension}`));
@@ -19,7 +18,6 @@ router.post("/:uuid", userConnected, upload.single('file'), async (req, res) => 
             user_id: 1,
             path: `${req.file.filename}.${extension}`
         })
-        console.log(req.params)
         res.status(200).json({
             status: 200,
             path: `${req.file.filename}.${extension}`

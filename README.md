@@ -12,7 +12,7 @@ Ce que j'ai pas pu faire :
 - Accorder plus de temps au front pour rendre quelque chose de "sympa"
 
 Petit soucis après la connexion, la redirection sur localhost:3000/ ne se fait pas correctement. Je n'ai jamais utilisé React Router Dom v6, j'avais pour habitude d'utiliser la v5 donc j'ai pas voulu trop m'attarder sur la doc de celle-ci.
-Donc une fois connecté, il faut manuellement changer l'url ocalhost:3000/login pour localhost:3000/.
+Donc une fois connecté, il faut manuellement changer l'url localhost:3000/login pour localhost:3000/.
 
 Utilisateurs de test :
 

@@ -14,5 +14,12 @@ Ce que j'ai pas pu faire :
 Petit soucis après la connexion, la redirection sur localhost:3000/ ne se fait pas correctement. Je n'ai jamais utilisé React Router Dom v6, j'avais pour habitude d'utiliser la v5 donc j'ai pas voulu trop m'attarder sur la doc de celle-ci.
 Donc une fois connecté, il faut manuellement changer l'url ocalhost:3000/login pour localhost:3000/.
 
+Utilisateurs de test :
+
+Email  | Mot de passe
+------------- | -------------
+jdll.allan@gmail.com | test
+test@gmail.com  | test
+
 Même si je n'ai pas pu tout terminer, j'ai beaucoup appris (j'avais jamais utilisé socket.io) et pris du plaisir à faire.
 Merci pour l'attention portée à mon test :)

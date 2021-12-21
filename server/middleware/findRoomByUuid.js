@@ -13,7 +13,7 @@ async function findRoomByUuid(req, res, next) {
         } else {
             res.status(404).json({
                 status: 404,
-                message: "Room not exist"
+                error: "Room not exist"
             })
         }
     } catch (err) {

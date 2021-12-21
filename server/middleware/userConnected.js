@@ -11,13 +11,15 @@ async function userConnected(req, res, next) {
         if (result) {
             req.userConnected = user
             return next();
+        } else {
+            res.status(403).json({
+                status: 403,
+                error: "You are not logged in"
+            })
         }
-        res.status(403).send('not ok')
     } catch (err) {
-        res.status(403).json({
-            status: 403,
-            error: `Vous n'avez pas les droits nécessaires`,
-        })
+        console.log(err)
+        res.send(err)
     }
 }
 

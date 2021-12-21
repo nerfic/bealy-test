@@ -34,6 +34,7 @@ router.post('/signup', findUserByEmail, async (req, res) => {
             }
         }
     } catch (err) {
+        console.log(err)
         res.send(err)
     }
 })
@@ -71,6 +72,7 @@ router.post('/login', findUserByEmail, async (req, res) => {
         }
     } catch (err) {
         console.log(err)
+        res.send(err)
     }
 })
 

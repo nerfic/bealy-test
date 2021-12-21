@@ -5,8 +5,9 @@ const RoomJoin = require('../models/roomsJoin')
 const { v4: uuidv4 } = require('uuid');
 const userConnected = require('../middleware/userConnected')
 const findRoomByUuid = require('../middleware/findRoomByUuid')
+const userAlreadyJoinRoom = require('../middleware/userAlreadyJoinRoom')
 
-router.post('/join', userConnected, findRoomByUuid, async (req, res) => {
+router.post('/join', userConnected, findRoomByUuid, userAlreadyJoinRoom, async (req, res) => {
     try {
         const userId = req.userConnected.id
         await RoomJoin.create({

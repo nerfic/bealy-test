@@ -2,6 +2,12 @@
 
 ![alt text](https://i.gyazo.com/a3358d0968714ed32fe5752f401767d4.gif)
 
+## UPDATE
+- Route sur le front sécurisé si utilisateur non connecté
+- Check si une room existe bien avant de pouvoir join
+- Ne peut pas join une room si déjà join
+## 
+
 Voici ce que j'ai réalisé pour le test technique.
 J'ai fais une erreur dès le départ, au lieu de tout detailler le projet, mes routes, schéma sql etc... je me suis lancer dans le code directement. Ce qui m'a fait perdre énormement de temps.
 

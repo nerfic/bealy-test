@@ -6,11 +6,9 @@ const { v4: uuidv4 } = require('uuid');
 const userConnected = require('../middleware/userConnected')
 const findRoomByUuid = require('../middleware/findRoomByUuid')
 
-router.post('/join', userConnected, async (req, res) => { // securiser avec un check si room exist ou pas
+router.post('/join', userConnected, findRoomByUuid, async (req, res) => {
     try {
         const userId = req.userConnected.id
-        // const roomUuid = req.room
-
         await RoomJoin.create({
             room_uuid: req.body.room_uuid,
             user_id: userId

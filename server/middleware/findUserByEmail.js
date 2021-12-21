@@ -12,7 +12,7 @@ async function findUserByEmail(req, res, next) {
     }
     catch (err) {
         console.log(err)
-        res.status(404).send('User not exist')
+        res.send(err)
     }
 }
 

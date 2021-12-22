@@ -16,10 +16,12 @@ router.post("/:uuid", userConnected, upload.single('file'), async (req, res) => 
         await FileUpload.create({
             room_id: req.params.uuid,
             user_id: 1,
+            original_name: req.file.originalname,
             path: `${req.file.filename}.${extension}`
         })
         res.status(200).json({
             status: 200,
+            name: req.file.originalname,
             path: `${req.file.filename}.${extension}`
         })
     } catch (err) {

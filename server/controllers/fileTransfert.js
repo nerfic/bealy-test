@@ -5,10 +5,12 @@ const fs = require("fs");
 const path = require("path");
 const FileUpload = require("../models/fileUpload")
 const userConnected = require("../middleware/userConnected")
+const userGetRightRoom = require("../middleware/userGetRightRoom")
+const findRoomByUuid = require("../middleware/findRoomByUuid")
 
 const upload = multer({ dest: 'public/uploads' });
 
-router.post("/:uuid", userConnected, upload.single('file'), async (req, res) => {
+router.post("/:uuid", userConnected, userGetRightRoom, upload.single('file'), async (req, res) => {
     try {
         let fileName = req.file.originalname.split(".")
         let extension = fileName[fileName.length - 1]
@@ -29,7 +31,7 @@ router.post("/:uuid", userConnected, upload.single('file'), async (req, res) => 
     }
 })
 
-router.get("/:uuid", userConnected, async (req, res) => {
+router.get("/:uuid", userConnected, userGetRightRoom, async (req, res) => {
     try {
         const allFiles = await FileUpload.findAll({
             where: {

@@ -14,9 +14,8 @@ export default function CreateRoom() {
     }
 
     const handleJoinRoom = () => {
-        console.log(roomUuid.length)
         if (roomUuid.length > 1) {
-            JoinRoomApi(roomUuid, (response) => setRoomJoin(response.success), (response) => setError(response.message))
+            JoinRoomApi(roomUuid, (response) => setRoomJoin(response.success), (response) => setError(response.error))
         } else {
             setError("Room code can't be empty")
         }

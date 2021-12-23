@@ -2,10 +2,13 @@
 
 ![alt text](https://i.gyazo.com/a3358d0968714ed32fe5752f401767d4.gif)
 
-## UPDATE
-- Route sur le front sécurisé si utilisateur non connecté
+## UPDATE (il faut utiliser fileexchangeNEW.sql)
+- Route sur le front sécurisé si user non connecté
 - Check si une room existe bien avant de pouvoir join
 - Ne peut pas join une room si déjà join
+- Enregistrement du nom original du fichier upload
+- Affichage des données du fichier avant upload
+- Impossible d'upload un fichier et de voir l'historique si l'user n'a pas rejoint la room
 ## 
 
 Voici ce que j'ai réalisé pour le test technique.
